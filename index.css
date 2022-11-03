@@ -1,0 +1,371 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.4;
+    height: 2000px;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 8rem 1.4rem;
+}
+
+@media screen and (min-width: 992px){
+    .container{
+        max-width: 1200px;
+    }
+}
+ 
+.header-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    padding: 0.8rem 1.4rem;
+}
+
+.header-inner a{
+    text-decoration: none;
+    color: #fff;
+}
+
+header ul{
+    list-style-type: none;
+    margin: 0 -1.4rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+header ul li{
+    display: inline-block;
+    margin: 0 1.4rem;
+}
+
+header .btn{
+    background-color: #1da1f2;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+header ul li:hover a{
+    border-bottom: 2px solid #fff;
+}
+
+.logo-wrap,
+.btn-wrap{
+    flex: 1;
+}
+
+.btn-wrap{
+    text-align: right;
+}
+
+@media screen and (max-width: 991){
+    .header-inner{
+        flex-wrap: wrap;
+    }
+    header ul{
+        order: 3;
+        flex: 100px;
+        margin-top: 0.2rem;
+    }
+}
+
+header .btn:hover{
+    background-color: #fff;
+    color: #1da1f2;
+    outline: 2px solid #1da1f2;
+}
+/* end of header section*/
+
+/* hero section start here*/
+.hero-section{
+    background: linear-gradient(
+        to bottom right,
+        rgba(28, 54, 51, 0.8),
+        rgba(28, 54, 51, 0.8)
+    ),
+    
+    center center no-repeat;
+    background-size: cover;
+    display: flex;
+    place-items: center;
+    text-align: center;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-section h1{
+    font-size: 4rem;
+}
+
+@media screen and (max-width:991px) {
+    .hero-section h1{
+        font-size: 2.2rem;
+    }
+    .heading{
+        margin-top: 2.5rem;
+}
+}
+
+.hero-section button{
+    background-color: #1da1f2;
+    border: none;
+    padding: 0.8rem 1.6rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: white;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+.hero-section button:hover{
+    background-color: transparent;
+    outline: 2px solid #1da1f2;
+}
+/* hero section end here*/
+
+/*product section*/
+.products{
+   min-width: 100vh; 
+   display: grid;
+   place-items: center;
+   text-align: center;
+}
+
+.product-info{
+    opacity: 0.7;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.products .items{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.products .items .fa{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #1da1f2;
+}
+
+.products .items .h4{
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 992px) {
+    .product-info{
+        max-width: 800px;
+        display: block;
+        margin: auto;
+    }
+
+    .products .items{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* product section ends here*/
+
+/* fixed button*/
+#myButton{
+    text-decoration: none; 
+    display: none;
+    place-items: center;
+    color: white;
+    background-color: #000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+#myButton:hover{
+    background-color: #333;
+}
+/* fixed button ends here */
+
+/* feature and transport starts here */
+.features{
+    background-color: #f9fbfe;
+    display: grid;
+    place-items: center;
+}
+
+.features h3,
+.transport h3{
+    color: #1da1f2;
+    margin-bottom: 0.3rem;
+}
+
+.features h3:not(:first-child),
+.transport h3:not(:first-child) {
+    margin-top: 1rem;
+}
+
+.features-inner img,
+.transport-inner img{
+    width: 100%;
+    max-width: 500px;
+    object-fit: cover;
+    margin: auto;
+    border-radius: 4px;
+}
+
+.transport-inner img{
+    order: 0;
+}
+
+.features-inner,
+.transport-inner{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media screen and (min-width: 991px){
+    .features-inner,
+    .transport-inner{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .transport-inner img{
+        order: 2;
+    }
+}
+
+.transport{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+/* transport section ends here */
+
+/* footer sectionj starts here */
+.footer-inner{
+    min-height: 100vh;
+    text-align: center;
+    background-color: #eee;
+}
+
+.footer-inner h2{
+    font-size: 2rem;
+}
+
+@media screen and (max-width:991px){
+    .footer-inner h2{
+        font-size: 1.5rem;
+    }
+}
+
+form{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns:1fr ;
+    gap: 1rem;
+}
+
+input,
+textarea{
+    width: 100%;
+    padding: 12px 20px;
+    border: 3px solid #ccc;
+}
+
+input::placeholder,
+textarea::placeholder{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+input:focus,
+textarea:focus{
+    outline: none;
+}
+
+form button{
+    background-color: #1da1f2;
+    border: none;
+    padding: 0.8rem 1.6rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+form button:hover{
+    background-color: transparent;
+    outline: 2px solid #1da1f2;
+    color: #1da1f2;
+}
+
+.social-links{
+    background-color: #3f424b;
+    color: #fff;
+    text-align: center;
+}
+
+.social-links-inner{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media screen and(max-width: 991px) {
+    .social-links-inner{
+        grid-template-columns: 1fr;
+    }
+}
+
+.social-links ul{
+    list-style-type: none;
+}
+
+.social-links a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-links li:not(:first-child){
+    margin-top: 0.5rem;
+}
+
+.icon-links li{
+    display: inline-block;
+    font-size: 1.8rem;
+}
+
+.icon-links li:not(:first-child){
+    margin-left: 0.5rem;
+}
